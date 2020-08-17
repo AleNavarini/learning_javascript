@@ -29,3 +29,8 @@ function getInfo(){
 		else return resolve(user_string); // promises return callback functions
 	});
 }
+
+fetch("https://reqres.in/api/users") // This is a promise
+	.then(data => data.json()) // formats to json
+	.then(data => {		users = data;})
+	.catch(error => console.log("Ha habido un error"));
