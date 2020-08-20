@@ -19,6 +19,33 @@
         background: lightblue;
         float: left;
     }
+    .selectable-list{margin-top: 200px;}
+    .selectable-list li{
+        width: 100%;
+        padding:3em;
+        border: 1px solid #ccc;
+        list-style: none;
+        cursor: pointer;
+    }
+    ul .ui-selecting{
+        background: rgb(151, 140, 140);
+    }
+    ul .ui-selected{
+        background: rgb(216, 75, 209);
+    }
+    .drop-area{
+        margin: 100px;
+        width: 200px;
+        height: 200px;
+        border: 5px solid green;
+    }
+    #button-effects{
+        color: white;
+        background:rgb(46, 177, 46);
+        border-radius: 25px;
+        width: 25%;
+        padding:1em;
+    }
 </style>
 </head>
 <body>
@@ -33,6 +60,35 @@
     <div class="element">
         I am element 3
     </div>
+    <br>
 
+    <!--<ul class="selectable-list">
+        <li class="ui-selectee">Hello I am an Li tag</li>
+        <li class="ui-selectee">Hello I am an Li tag</li>
+        <li class="ui-selectee">Hello I am an Li tag</li>
+        <li class="ui-selectee">Hello I am an Li tag</li>
+        <li class="ui-selectee">Hello I am an Li tag</li>
+    </ul>
+-->
+
+    <div class="drop-area">
+        
+    </div>
+
+    <a href="" title="See data from author"> Author data</a>
+    <button id="button-effects"> Click Me! </button>
+
+    <input type="text" name="calendar" id="calendar">
+
+    <div id= "tabs">
+        <ul>
+            <li><a href="#tabs-1"></a></li>
+            <li><a href="#tabs-2"></a></li>
+            <li><a href="#tabs-3"></a></li>
+        </ul>
+        <div id="tabs-1"><span> Tab Number 1</span></div>
+        <div id="tabs-2"><span> Tab Number 2</span></div>
+        <div id="tabs-3"><span> Tab Number 3</span></div>
+    </div>
 </body>
 </html>
