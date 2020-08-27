@@ -5,6 +5,18 @@ interface CarBase{
     getColor();
     setColor(new_color); // defines the functions that your class must have
 }
+
+
+//decorator
+
+function stampi(logo: string){
+    return function(target: Function){
+        target.prototype.stampation = function():void{
+            console.log("Car is stamped with" + logo);
+        }
+    }
+}
+@stampi('Lambo')
 class Car implements CarBase{ // The name of the class must be the same as the file
     
     // properties
@@ -15,31 +27,31 @@ class Car implements CarBase{ // The name of the class must be the same as the f
 
 
     //Gets and sets
-    public getColor(){
+    public getColor():string{
         return this.color;
     }
-    public setColor(new_color){
+    public setColor(new_color:string){
         this.color = new_color;
     }
     
-    public getModel(){
+    public getModel():string{
         return this.model;
     }
-    public setModel(new_model){
+    public setModel(new_model:string){
         this.model = new_model;
     }
     
-    public getBrand(){
+    public getBrand():string{
         return this.brand;
     }
-    public setBrand(new_brand){
+    public setBrand(new_brand:string){
         this.brand = new_brand;
     }
     
-    public getPrice(){
+    public getPrice():number{
         return this.price;
     }
-    public setPrice(new_price){
+    public setPrice(new_price:number){
         this.price = new_price;
     }
     
