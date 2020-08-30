@@ -1,0 +1,9 @@
+<h1> This is the New component</h1>
+<button (click)= "redirect()">Press me</button>
+
+<ng-container *ngIf="condition; else elseTemplate">
+    <p>OPCION 1 TRUE</p>
+</ng-container>
+<ng-template #elseTemplate>
+    <p> OPCION 2 TRUE</p>
+</ng-template>
